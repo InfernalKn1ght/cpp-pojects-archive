@@ -3,7 +3,7 @@
 #include <fstream>
 int a[4][4];
 int b, c, ox0, oy0;
-int maxn = 3, minn = 0;
+const int maxn = 3, minn = 0;
 int s0;
 int m, p;
 int v;
@@ -47,7 +47,6 @@ void goup()
         s0 = a[oy0][ox0];
         a[oy0][ox0] = a[oy0 - 1][ox0];
         a[oy0 - 1][ox0] = s0;
-        oy0--;
     }
     else
     {
@@ -61,7 +60,6 @@ void goleft()
         s0 = a[oy0][ox0];
         a[oy0][ox0] = a[oy0][ox0 - 1];
         a[oy0][ox0 - 1] = s0;
-        ox0--;
     }
     else
     {
@@ -75,7 +73,6 @@ void godown()
         s0 = a[oy0][ox0];
         a[oy0][ox0] = a[oy0 + 1][ox0];
         a[oy0 + 1][ox0] = s0;
-        oy0++;
     }
     else
     {
@@ -89,7 +86,6 @@ void goright()
         s0 = a[oy0][ox0];
         a[oy0][ox0] = a[oy0][ox0 + 1];
         a[oy0][ox0 + 1] = s0;
-        ox0++;
     }
     else
     {
@@ -145,7 +141,6 @@ void directions()
 }
 void countm2()
 {
-    int ap[15] = { 16, 14, 12, 10, 6, 4, 4, 4, 6, 4, 1, 1, 6, 4, 1 };
     b = 0;
     c = 0;
     c4 = 0;
@@ -161,7 +156,6 @@ void countm2()
                 b1 = b1 - b;
                 c1 = c1 - c;
                 c3 = (c1 * c1) + (b1 * b1);
-                c3 = c3 * ap[q - 1];
                 c4 = c4 + c3;
             }
         }
@@ -173,7 +167,7 @@ void file()
     fout.open("Vcount.txt");
     if (!fout.is_open())
     {
-        cout << "Îøèáêà îòêðûòèÿ ôàéëà" << endl;
+        cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°" << endl;
     }
     else
     {
@@ -216,7 +210,16 @@ int main()
     }
     cout << "0 coordinates" << "\n" << "x:" << ox0 << "\n" << "y:" << oy0;
     cout << "\n" << "\n";
+    countm();
+    cout << p;
+    cout << "\n" << "\n";
     hr = rand() % 1000000 + 10000;
+    int l = 1;
+    int l1 = 1;
+    int l2 = 1;
+    int l3 = 1;
+    int max = 3;
+    int min = 0;
     while (h <= hr)
     {
         int v = rand() % 4 + 0;
@@ -236,6 +239,7 @@ int main()
         {
             goright();
         }
+        zero();
         h++;
     }
     countm2();
@@ -243,25 +247,104 @@ int main()
     cout << "\n" << "\n";
     countm();
     cout << "p=" << p;
-    cout << "\n" << "c4=" << c4;
     cout << "\n" << "\n";
-    int zx[41];
-    int zxx;
-    int v1;
-    int c5 = 0;
-    int c6 = 0;
-    int c7 = 0;
-    int cx = 0;
-    int zxx1[70][41];
-    int t1[200];
-    int t2 = 0;
-
+    cout << "\n" << "c4=" << c4;
+    /*while (nr < 10000000)
+    {
+        countm1();
+        p2 = p;
+        int v = rand() % 4 + 0;
+        if (v == 0)
+        {
+            goup();
+        }
+        if (v == 1)
+        {
+            goleft();
+        }
+        if (v == 2)
+        {
+            godown();
+        }
+        if (v == 3)
+        {
+            goright();
+        }
+        countm1();
+        p1 = p;
+        if ((p2 - p1) > 0)
+        {
+            if (v == 0)
+                godown();
+            if (v == 2)
+                goup();
+            if (v == 1)
+                goright();
+            if (v == 3)
+                goleft;
+        }
+        nr++;
+    }
     while (nr < 10000000)
     {
         countm2();
         c4_2 = c4;
-        for (zxx = 0; zxx <= 40; zxx++)
+        int v = rand() % 4 + 0;
+        if (v == 0)
         {
+            goup();
+        }
+        if (v == 1)
+        {
+            goleft();
+        }
+        if (v == 2)
+        {
+            godown();
+        }
+        if (v == 3)
+        {
+            goright();
+        }
+        countm2();
+        c4_1 = c4;
+        if ((c4_1 - c4_2) > 0)
+        {
+            if (v == 0)
+                godown();
+            if (v == 2)
+                goup();
+            if (v == 1)
+                goright();
+            if (v == 3)
+                goleft;
+        }
+        nr++;
+    }*/
+    int zx[30];
+    int zxx;
+    int v1;
+    while (nr < 1000000)
+    {
+        zero();
+        /* cout << "\n";
+         cout << "intro:";
+         printmass();
+         cout << "\n";
+         countm2();
+         cout << "c4=" << c4;
+         cout << "\n";
+         cout << "mass:";
+         for (b = 0; b <= 5; b++)
+         {
+             cout << zx[b];
+         }
+         cout << "\n" << "\n";*/
+        countm2();
+        c4_2 = c4;
+        for (zxx = 0; zxx <= 29; zxx++)
+        {
+            zero();
             v = rand() % 4 + 0;
             if (v == 0)
             {
@@ -281,11 +364,23 @@ int main()
             }
             zx[zxx] = v;
         }
+        zero();
         countm2();
         c4_1 = c4;
-        if ((c4_1 - c4_2) >= 0)
+        /*cout << "before:";
+        printmass();
+        cout << "\n";
+        cout << "c4=" << c4;
+        cout << "\n";
+        cout << "mass:";
+        for (b = 0; b <= 4; b++)
         {
-            for (zxx = 40; zxx >= 0; zxx--)
+            cout << zx[b];
+        }
+        cout << "\n" << "\n";*/
+        if ((c4_1 - c4_2) > 0)
+        {
+            for (zxx = 29; zxx >= 0; zxx--)
             {
                 v1 = zx[zxx];
                 if (v1 == 0)
@@ -304,27 +399,95 @@ int main()
                 {
                     goleft();
                 }
+                //cout << "v1:" << v1 << " ";
+                zero();
             }
         }
-        else
-        {
-            c6 = c6 + 41;
-            for (c = 0; c <= 40; c++)
-            {
-                zxx1[cx][c] = zx[c];
-            }
-            cx++;
-        }
-        countm2();
-        if (c4 == 0)
-        {
-            cout << "Solved!";
-            break;
-        }
+        /*cout << "\n" << "\n";
+         cout << "after:";
+         countm2();
+         printmass();
+         cout << "\n";
+         cout << "c4=" << c4;
+         cout << "\n";
+         cout << "mass:";
+         for (b = 0; b <= 4; b++)
+         {
+             cout << zx[b];
+         }
+         cout << "\n";*/
         nr++;
     }
-    cout << "\n" << "\n";
-    cout << nr;
+    /*while (nr < 10000)
+    {
+        for (b = 0; b <= 3; b++)
+        {
+            for (c = 0; c <= 3; c++)
+            {
+                if (a[b][c] == 1)
+                {
+                    q = a[b][c];
+                    b1 = (q - 1) / 4;
+                    c1 = (q - 1) % 4;
+                    b1 = b1 - b;
+                    c1 = c1 - c;
+                    c3 = (c1 * c1) + (b1 * b1);
+                }
+            }
+        }
+        c3_2 = c3;
+        int v = rand() % 4 + 0;
+        if (v == 0)
+        {
+            goup();
+        }
+        if (v == 1)
+        {
+            goleft();
+        }
+        if (v == 2)
+        {
+            godown();
+        }
+        if (v == 3)
+        {
+            goright();
+        }
+        while (nr < 1000)
+        {
+            for (b = 0; b <= 3; b++)
+            {
+                for (c = 0; c <= 3; c++)
+                {
+                    if (a[b][c] == 1)
+                    {
+                        q = a[b][c];
+                        b1 = (q - 1) / 4;
+                        c1 = (q - 1) % 4;
+                        b1 = b1 - b;
+                        c1 = c1 - c;
+                        c3 = (c1 * c1) + (b1 * b1);
+                    }
+                }
+            }
+        }
+        c3_1 = c3;
+        if ((c3_1 - c3_2) > 0)
+        {
+            if (v == 0)
+                godown();
+            if (v == 2)
+                goup();
+            if (v == 1)
+                goright();
+            if (v == 3)
+                goleft;
+        }
+        cout << c3;
+        nr++;
+    }*/
+
+    printmass();
     cout << "\n" << "\n";
     countm();
     countm2();
@@ -332,24 +495,20 @@ int main()
     printmass();
     cout << "\n" << "\n";
     cout << "p=" << p;
-    cout << "\n";
-    cout << "c4=" << c4;
     cout << "\n" << "\n";
-    for (b = 0; b <= cx; b++)
-    {
-        for (c = 0; c <= 40; c++)
-        {
-            if ((zxx1[b][c] >= 0) && (zxx1[b][c] < 4))
-                c5 = 1 + c5;
+    cout << "c4=" << c4;
+
+
+    /*buf = 0;
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            fifteen[i][j] = buf;
+            buf++;
         }
     }
-    for (b = 0; b <= cx; b++)
-    {
-        for (c = 0; c <= 40; c++)
-        {
-            if (zxx1[b][c] >= 0)
-                c7 = c7 + 1;
-        }
-    }
-    cout << "all moves except 4:" << c5 << "  " << "all moves:" << c6 << "  " << "check:" << c7;
+
+    srand(time(0));
+    int fifteen[4][4], coord0_x, coord0_y, buf;
+    const int max_n = 3, min_n = 0;
+    string key;*/
 }

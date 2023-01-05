@@ -1,12 +1,12 @@
 #include <iostream>
 #include <ctime>
 #include <fstream>
-int a[4][4];
+//int fifteenMatrix[4][4]; //a
 int b, c, ox0, oy0;
-const int max = 3, min = 0;
+const int maxn = 3, minn = 0;
 int s0;
 int m, p;
-int v;
+//int v;
 int q;
 int b1, c1;
 int c3, c4;
@@ -14,170 +14,222 @@ int c4_1, c4_2;
 int n;
 int c3_1;
 int c3_2;
+
 using namespace std;
-void zero()
-{
-    for (b = 0; b <= 3; b++)
-    {
-        for (c = 0; c <= 3; c++)
-        {
-            if (a[b][c] == 0)
-            {
-                ox0 = c;
-                oy0 = b;
-            }
+
+
+void printFifteenMatrix(int**& fifteenMatrix) {
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            cout << fifteenMatrix[i][j] << " ";
         }
-    }
-}
-void printmass()
-{
-    for (b = 0; b <= 3; b++)
-    {
         cout << "\n";
-        for (c = 0; c <= 3; c++)
-        {
-            cout << a[b][c] << " ";
+    }
+    cout << "\n";
+}
+
+void zeroMove(int**& fifteenMatrix, int*& zeroCoordinates, int direction) {
+    switch (direction) {
+    case 1:
+        if (zeroCoordinates[0] > 0) {
+            int buf = fifteenMatrix[zeroCoordinates[0]][zeroCoordinates[1]];
+            fifteenMatrix[zeroCoordinates[0]][zeroCoordinates[1]] = fifteenMatrix[zeroCoordinates[0] - 1][zeroCoordinates[1]];
+            fifteenMatrix[zeroCoordinates[0] - 1][zeroCoordinates[1]] = buf;
+            zeroCoordinates[0] = zeroCoordinates[0] - 1;
         }
-    }
-}
-void goup()
-{
-    if (oy0 > min)
-    {
-        s0 = a[oy0][ox0];
-        a[oy0][ox0] = a[oy0 - 1][ox0];
-        a[oy0 - 1][ox0] = s0;
-    }
-    else
-    {
-        v = 4;
-    }
-}
-void goleft()
-{
-    if (ox0 > min)
-    {
-        s0 = a[oy0][ox0];
-        a[oy0][ox0] = a[oy0][ox0 - 1];
-        a[oy0][ox0 - 1] = s0;
-    }
-    else
-    {
-        v = 4;
-    }
-}
-void godown()
-{
-    if (oy0 < max)
-    {
-        s0 = a[oy0][ox0];
-        a[oy0][ox0] = a[oy0 + 1][ox0];
-        a[oy0 + 1][ox0] = s0;
-    }
-    else
-    {
-        v = 4;
-    }
-}
-void goright()
-{
-    if (ox0 < max)
-    {
-        s0 = a[oy0][ox0];
-        a[oy0][ox0] = a[oy0][ox0 + 1];
-        a[oy0][ox0 + 1] = s0;
-    }
-    else
-    {
-        v = 4;
-    }
-}
-void countm()
-{
-    m = 1;
-    p = 0;
-    for (b = 0; b <= 3; b++)
-    {
-        for (c = 0; c <= 3; c++)
-        {
-            if (a[b][c] == m % 16)
-                p++;
-            m++;
+        break;
+    case 2:
+        if (zeroCoordinates[1] > 0) {
+            int buf = fifteenMatrix[zeroCoordinates[0]][zeroCoordinates[1]];
+            fifteenMatrix[zeroCoordinates[0]][zeroCoordinates[1]] = fifteenMatrix[zeroCoordinates[0]][zeroCoordinates[1] - 1];
+            fifteenMatrix[zeroCoordinates[0]][zeroCoordinates[1] - 1] = buf;
+            zeroCoordinates[1] -= 1;
         }
-    }
-}
-void countm1()
-{
-    m = 1;
-    p = 0;
-    for (b = 0; b <= 3; b++)
-    {
-        for (c = 0; c <= 3; c++)
-        {
-            if (a[b][c] == m)
-                p++;
-            m++;
+        break;
+    case 3:
+        if (zeroCoordinates[0] < 3) {
+            int buf = fifteenMatrix[zeroCoordinates[0]][zeroCoordinates[1]];
+            fifteenMatrix[zeroCoordinates[0]][zeroCoordinates[1]] = fifteenMatrix[zeroCoordinates[0] + 1][zeroCoordinates[1]];
+            fifteenMatrix[zeroCoordinates[0] + 1][zeroCoordinates[1]] = buf;
+            zeroCoordinates[0] += 1;
         }
+        break;
+    case 4:
+        if (zeroCoordinates[1] < 3) {
+            int buf = fifteenMatrix[zeroCoordinates[0]][zeroCoordinates[1]];
+            fifteenMatrix[zeroCoordinates[0]][zeroCoordinates[1]] = fifteenMatrix[zeroCoordinates[0]][zeroCoordinates[1] + 1];
+            fifteenMatrix[zeroCoordinates[0]][zeroCoordinates[1] + 1] = buf;
+            zeroCoordinates[1] += 1;
+        }
+        break;
     }
+
 }
-void directions()
-{
-    if (v == 0)
-    {
-        goup();
-    }
-    if (v == 1)
-    {
-        goleft();
-    }
-    if (v == 2)
-    {
-        godown();
-    }
-    if (v == 3)
-    {
-        goright();
-    }
-}
-void countm2()
-{
-    b = 0;
-    c = 0;
-    c4 = 0;
-    for (b = 0; b <= 3; b++)
-    {
-        for (c = 0; c <= 3; c++)
-        {
-            if (a[b][c] != 0)
-            {
-                q = a[b][c];
-                b1 = (q - 1) / 4;
-                c1 = (q - 1) % 4;
-                b1 = b1 - b;
-                c1 = c1 - c;
-                c3 = (c1 * c1) + (b1 * b1);
-                c4 = c4 + c3;
+
+//void goup()
+//{
+//    if (oy0 > minn)
+//    {
+//        s0 = a[oy0][ox0];
+//        a[oy0][ox0] = a[oy0 - 1][ox0];
+//        a[oy0 - 1][ox0] = s0;
+//    }
+//    else
+//    {
+//        v = 4;
+//    }
+//}
+//void goleft()
+//{
+//    if (ox0 > minn)
+//    {
+//        s0 = a[oy0][ox0];
+//        a[oy0][ox0] = a[oy0][ox0 - 1];
+//        a[oy0][ox0 - 1] = s0;
+//    }
+//    else
+//    {
+//        v = 4;
+//    }
+//}
+//void godown()
+//{
+//    if (oy0 < maxn)
+//    {
+//        s0 = a[oy0][ox0];
+//        a[oy0][ox0] = a[oy0 + 1][ox0];
+//        a[oy0 + 1][ox0] = s0;
+//    }
+//    else
+//    {
+//        v = 4;
+//    }
+//}
+//void goright()
+//{
+//    if (ox0 < maxn)
+//    {
+//        s0 = a[oy0][ox0];
+//        a[oy0][ox0] = a[oy0][ox0 + 1];
+//        a[oy0][ox0 + 1] = s0;
+//    }
+//    else
+//    {
+//        v = 4;
+//    }
+//}
+//void countm()
+//{
+//    m = 1;
+//    p = 0;
+//    for (b = 0; b <= 3; b++)
+//    {
+//        for (c = 0; c <= 3; c++)
+//        {
+//            if (a[b][c] == m % 16)
+//                p++;
+//            m++;
+//        }
+//    }
+//}
+//void countm1()
+//{
+//    m = 1;
+//    p = 0;
+//    for (b = 0; b <= 3; b++)
+//    {
+//        for (c = 0; c <= 3; c++)
+//        {
+//            if (a[b][c] == m)
+//                p++;
+//            m++;
+//        }
+//    }
+//}
+//void directions()
+//{
+//    if (v == 0)
+//    {
+//        goup();
+//    }
+//    if (v == 1)
+//    {
+//        goleft();
+//    }
+//    if (v == 2)
+//    {
+//        godown();
+//    }
+//    if (v == 3)
+//    {
+//        goright();
+//    }
+//}
+
+int distanceValue(int**& fifteenMatrix) {
+    int value = 0;
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            if (fifteenMatrix[i][j] != 0) {
+                value += pow((fifteenMatrix[i][j] - 1) / 4 - i, 2) + pow((fifteenMatrix[i][j] - 1) % 4 - j, 2);
             }
         }
     }
+    return value;
 }
-void file()
-{
-    ofstream fout;
-    fout.open("Vcount.txt");
-    if (!fout.is_open())
-    {
-        cout << "Ошибка открытия файла" << endl;
-    }
-    else
-    {
-        fout << v << " ";
-        fout.close();
-    }
-}
-int main()
-{
+
+void shuffle(int**& fifteenMatrix, int*& zeroCoordinates) {
     srand(time(0));
+    int value = rand() % 100000 + 500000;
+    for (int i = 0; i < value; ++i) {
+        int move = rand() % 4 + 0;
+        zeroMove(fifteenMatrix, zeroCoordinates, move);
+    }
+}
+
+//void countm2()
+//{
+//    b = 0;
+//    c = 0;
+//    c4 = 0;
+//    for (b = 0; b <= 3; b++)
+//    {
+//        for (c = 0; c <= 3; c++)
+//        {
+//            if (a[b][c] != 0)
+//            {
+//                q = a[b][c];
+//                b1 = (q - 1) / 4;
+//                c1 = (q - 1) % 4;
+//                b1 = b1 - b;
+//                c1 = c1 - c;
+//                c3 = (c1 * c1) + (b1 * b1);
+//                c4 = c4 + c3;
+//            }
+//        }
+//    }
+//}
+int main() {
+    int** fifteenMatrix = new int* [4];
+    int* zeroCoordinates = new int[2];
+
+    zeroCoordinates[0] = 3;
+    zeroCoordinates[1] = 3;
+
+    for (int i = 0; i < 4; ++i) {
+        fifteenMatrix[i] = new int[4];
+    }
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            fifteenMatrix[i][j] = (4 * i + (j + 1)) % 16;
+        }
+    }
+    
+    printFifteenMatrix(fifteenMatrix);
+    shuffle(fifteenMatrix, zeroCoordinates);
+    printFifteenMatrix(fifteenMatrix);
+    
+
     int p1;
     int nr = 0;
     int x0;
@@ -187,6 +239,7 @@ int main()
     int hr;
     k = 1;
     int p2;
+
     for (b = 0; b <= 3; b++)
     {
         for (c = 0; c <= 3; c++)
@@ -499,16 +552,4 @@ int main()
     cout << "c4=" << c4;
 
 
-    buf = 0;
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) {
-            fifteen[i][j] = buf;
-            buf++;
-        }
-    }
-
-    srand(time(0));
-    int fifteen[4][4], coord0_x, coord0_y, buf;
-    const int max_n = 3, min_n = 0;
-    string key;
 }
