@@ -1,14 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31112.23
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Разложения Натурального Числа", "..\Подготовка к Олимпиаде\разложения натурального числа\разложения натурального числа\разложения натурального числа.vcxproj", "{ABC327F4-2E4B-496C-AB41-5C7BB7FC0073}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Количество Делителей Натурального Числа", "..\Подготовка к Олимпиаде\делители\делители\делители.vcxproj", "{6114F34A-2F93-4126-B97C-5FBC6D5D7550}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Количество Делителей Натурального Числа (2)", "..\Подготовка к Олимпиаде\делители 2\делители 2\делители 2.vcxproj", "{B5F5C076-85D6-4663-82B5-C4878507350F}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Определение Простого Числа", "Определение Простого Числа\Определение Простого Числа.vcxproj", "{C4D51BFC-F703-4D7B-8AD9-253F7A191056}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Разложение на Простые Множители", "Разложение на Простые Множители\Разложение на Простые Множители.vcxproj", "{7851FE75-E178-47B2-B569-A956CC1E0299}"
@@ -41,6 +35,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Сортировка Сли
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Пирамидальная Сортировка", "Пирамидальная Сортировка\Пирамидальная Сортировка.vcxproj", "{7AA31963-664F-44B2-B17E-13E9A448A20B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Разложения Натурального Числа", "Разложения Натурального Числа\Разложения Натурального Числа.vcxproj", "{09F527C7-BEC8-4FC9-8B93-B0A3FEA43102}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Количество Делителей Натурального Числа", "Количество Делителей Натурального Числа\Количество Делителей Натурального Числа.vcxproj", "{C07B0365-E8B6-4C29-AB0D-931BC6389181}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Количество Делителей Натурального Числа (2)", "Количество Делителей Натурального Числа (2)\Количество Делителей Натурального Числа (2).vcxproj", "{0DAA9649-06BF-4D5B-A63C-98C09C278B1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -49,30 +49,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ABC327F4-2E4B-496C-AB41-5C7BB7FC0073}.Debug|x64.ActiveCfg = Debug|x64
-		{ABC327F4-2E4B-496C-AB41-5C7BB7FC0073}.Debug|x64.Build.0 = Debug|x64
-		{ABC327F4-2E4B-496C-AB41-5C7BB7FC0073}.Debug|x86.ActiveCfg = Debug|Win32
-		{ABC327F4-2E4B-496C-AB41-5C7BB7FC0073}.Debug|x86.Build.0 = Debug|Win32
-		{ABC327F4-2E4B-496C-AB41-5C7BB7FC0073}.Release|x64.ActiveCfg = Release|x64
-		{ABC327F4-2E4B-496C-AB41-5C7BB7FC0073}.Release|x64.Build.0 = Release|x64
-		{ABC327F4-2E4B-496C-AB41-5C7BB7FC0073}.Release|x86.ActiveCfg = Release|Win32
-		{ABC327F4-2E4B-496C-AB41-5C7BB7FC0073}.Release|x86.Build.0 = Release|Win32
-		{6114F34A-2F93-4126-B97C-5FBC6D5D7550}.Debug|x64.ActiveCfg = Debug|x64
-		{6114F34A-2F93-4126-B97C-5FBC6D5D7550}.Debug|x64.Build.0 = Debug|x64
-		{6114F34A-2F93-4126-B97C-5FBC6D5D7550}.Debug|x86.ActiveCfg = Debug|Win32
-		{6114F34A-2F93-4126-B97C-5FBC6D5D7550}.Debug|x86.Build.0 = Debug|Win32
-		{6114F34A-2F93-4126-B97C-5FBC6D5D7550}.Release|x64.ActiveCfg = Release|x64
-		{6114F34A-2F93-4126-B97C-5FBC6D5D7550}.Release|x64.Build.0 = Release|x64
-		{6114F34A-2F93-4126-B97C-5FBC6D5D7550}.Release|x86.ActiveCfg = Release|Win32
-		{6114F34A-2F93-4126-B97C-5FBC6D5D7550}.Release|x86.Build.0 = Release|Win32
-		{B5F5C076-85D6-4663-82B5-C4878507350F}.Debug|x64.ActiveCfg = Debug|x64
-		{B5F5C076-85D6-4663-82B5-C4878507350F}.Debug|x64.Build.0 = Debug|x64
-		{B5F5C076-85D6-4663-82B5-C4878507350F}.Debug|x86.ActiveCfg = Debug|Win32
-		{B5F5C076-85D6-4663-82B5-C4878507350F}.Debug|x86.Build.0 = Debug|Win32
-		{B5F5C076-85D6-4663-82B5-C4878507350F}.Release|x64.ActiveCfg = Release|x64
-		{B5F5C076-85D6-4663-82B5-C4878507350F}.Release|x64.Build.0 = Release|x64
-		{B5F5C076-85D6-4663-82B5-C4878507350F}.Release|x86.ActiveCfg = Release|Win32
-		{B5F5C076-85D6-4663-82B5-C4878507350F}.Release|x86.Build.0 = Release|Win32
 		{C4D51BFC-F703-4D7B-8AD9-253F7A191056}.Debug|x64.ActiveCfg = Debug|x64
 		{C4D51BFC-F703-4D7B-8AD9-253F7A191056}.Debug|x64.Build.0 = Debug|x64
 		{C4D51BFC-F703-4D7B-8AD9-253F7A191056}.Debug|x86.ActiveCfg = Debug|Win32
@@ -201,6 +177,30 @@ Global
 		{7AA31963-664F-44B2-B17E-13E9A448A20B}.Release|x64.Build.0 = Release|x64
 		{7AA31963-664F-44B2-B17E-13E9A448A20B}.Release|x86.ActiveCfg = Release|Win32
 		{7AA31963-664F-44B2-B17E-13E9A448A20B}.Release|x86.Build.0 = Release|Win32
+		{09F527C7-BEC8-4FC9-8B93-B0A3FEA43102}.Debug|x64.ActiveCfg = Debug|x64
+		{09F527C7-BEC8-4FC9-8B93-B0A3FEA43102}.Debug|x64.Build.0 = Debug|x64
+		{09F527C7-BEC8-4FC9-8B93-B0A3FEA43102}.Debug|x86.ActiveCfg = Debug|Win32
+		{09F527C7-BEC8-4FC9-8B93-B0A3FEA43102}.Debug|x86.Build.0 = Debug|Win32
+		{09F527C7-BEC8-4FC9-8B93-B0A3FEA43102}.Release|x64.ActiveCfg = Release|x64
+		{09F527C7-BEC8-4FC9-8B93-B0A3FEA43102}.Release|x64.Build.0 = Release|x64
+		{09F527C7-BEC8-4FC9-8B93-B0A3FEA43102}.Release|x86.ActiveCfg = Release|Win32
+		{09F527C7-BEC8-4FC9-8B93-B0A3FEA43102}.Release|x86.Build.0 = Release|Win32
+		{C07B0365-E8B6-4C29-AB0D-931BC6389181}.Debug|x64.ActiveCfg = Debug|x64
+		{C07B0365-E8B6-4C29-AB0D-931BC6389181}.Debug|x64.Build.0 = Debug|x64
+		{C07B0365-E8B6-4C29-AB0D-931BC6389181}.Debug|x86.ActiveCfg = Debug|Win32
+		{C07B0365-E8B6-4C29-AB0D-931BC6389181}.Debug|x86.Build.0 = Debug|Win32
+		{C07B0365-E8B6-4C29-AB0D-931BC6389181}.Release|x64.ActiveCfg = Release|x64
+		{C07B0365-E8B6-4C29-AB0D-931BC6389181}.Release|x64.Build.0 = Release|x64
+		{C07B0365-E8B6-4C29-AB0D-931BC6389181}.Release|x86.ActiveCfg = Release|Win32
+		{C07B0365-E8B6-4C29-AB0D-931BC6389181}.Release|x86.Build.0 = Release|Win32
+		{0DAA9649-06BF-4D5B-A63C-98C09C278B1A}.Debug|x64.ActiveCfg = Debug|x64
+		{0DAA9649-06BF-4D5B-A63C-98C09C278B1A}.Debug|x64.Build.0 = Debug|x64
+		{0DAA9649-06BF-4D5B-A63C-98C09C278B1A}.Debug|x86.ActiveCfg = Debug|Win32
+		{0DAA9649-06BF-4D5B-A63C-98C09C278B1A}.Debug|x86.Build.0 = Debug|Win32
+		{0DAA9649-06BF-4D5B-A63C-98C09C278B1A}.Release|x64.ActiveCfg = Release|x64
+		{0DAA9649-06BF-4D5B-A63C-98C09C278B1A}.Release|x64.Build.0 = Release|x64
+		{0DAA9649-06BF-4D5B-A63C-98C09C278B1A}.Release|x86.ActiveCfg = Release|Win32
+		{0DAA9649-06BF-4D5B-A63C-98C09C278B1A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
