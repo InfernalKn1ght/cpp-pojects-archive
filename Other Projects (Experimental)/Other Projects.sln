@@ -13,13 +13,23 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Словарь (Тест)",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Обновление Экрана. Тест", "Обновление Экрана. Тест\Обновление Экрана. Тест.vcxproj", "{5A03BB7C-AFF3-492C-A5AC-6908F21ADED1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Классы. Тест", "Классы. Тест\Классы. Тест.vcxproj", "{75184015-30A3-4332-A833-F7D080CB0D14}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes. Test", "Классы. Тест\Классы. Тест.vcxproj", "{75184015-30A3-4332-A833-F7D080CB0D14}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Динамическое Программирование", "Динамическое Программирование\Динамическое Программирование.vcxproj", "{31FACB51-AFE2-4EFD-ADD4-07513F225ECF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dynamic Programming", "Динамическое Программирование\Динамическое Программирование.vcxproj", "{31FACB51-AFE2-4EFD-ADD4-07513F225ECF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Классы. Тест 2", "Классы. Тест 2\Классы. Тест 2.vcxproj", "{8D0E707C-5762-4BE4-9A29-877A175FAAC1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes. Test 2", "Классы. Тест 2\Классы. Тест 2.vcxproj", "{8D0E707C-5762-4BE4-9A29-877A175FAAC1}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Указатели. Тест", "Указатели. Тест\Указатели. Тест.vcxproj", "{3C2504DA-C790-4ABF-A5E8-D5EA37F738D5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ant Algorithm", "Ant Algorithm\Ant Algorithm.vcxproj", "{E8CB2FB4-25FC-450C-B22B-083568727132}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pointers. Test 2", "Pointers Test\Pointers Test.vcxproj", "{719128C8-62FE-417C-A56F-5B1AA4734FD7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Neural Network. Poiseuille", "Neural Network. Poiseuille\Neural Network. Poiseuille.vcxproj", "{9B30DDEE-834A-4EEE-94AD-DAC2D04D6056}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Neural Network. Poiseuille 2", "Neural Network. Poiseuille 2\Neural Network. Poiseuille 2.vcxproj", "{D089001A-3BC8-4AE7-AF1F-0D03444FC59B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class Vector", "Class Vector\Class Vector.vcxproj", "{C3A73F15-FACC-4B53-BD4F-077E04DA5B82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +111,46 @@ Global
 		{3C2504DA-C790-4ABF-A5E8-D5EA37F738D5}.Release|x64.Build.0 = Release|x64
 		{3C2504DA-C790-4ABF-A5E8-D5EA37F738D5}.Release|x86.ActiveCfg = Release|Win32
 		{3C2504DA-C790-4ABF-A5E8-D5EA37F738D5}.Release|x86.Build.0 = Release|Win32
+		{E8CB2FB4-25FC-450C-B22B-083568727132}.Debug|x64.ActiveCfg = Debug|x64
+		{E8CB2FB4-25FC-450C-B22B-083568727132}.Debug|x64.Build.0 = Debug|x64
+		{E8CB2FB4-25FC-450C-B22B-083568727132}.Debug|x86.ActiveCfg = Debug|Win32
+		{E8CB2FB4-25FC-450C-B22B-083568727132}.Debug|x86.Build.0 = Debug|Win32
+		{E8CB2FB4-25FC-450C-B22B-083568727132}.Release|x64.ActiveCfg = Release|x64
+		{E8CB2FB4-25FC-450C-B22B-083568727132}.Release|x64.Build.0 = Release|x64
+		{E8CB2FB4-25FC-450C-B22B-083568727132}.Release|x86.ActiveCfg = Release|Win32
+		{E8CB2FB4-25FC-450C-B22B-083568727132}.Release|x86.Build.0 = Release|Win32
+		{719128C8-62FE-417C-A56F-5B1AA4734FD7}.Debug|x64.ActiveCfg = Debug|x64
+		{719128C8-62FE-417C-A56F-5B1AA4734FD7}.Debug|x64.Build.0 = Debug|x64
+		{719128C8-62FE-417C-A56F-5B1AA4734FD7}.Debug|x86.ActiveCfg = Debug|Win32
+		{719128C8-62FE-417C-A56F-5B1AA4734FD7}.Debug|x86.Build.0 = Debug|Win32
+		{719128C8-62FE-417C-A56F-5B1AA4734FD7}.Release|x64.ActiveCfg = Release|x64
+		{719128C8-62FE-417C-A56F-5B1AA4734FD7}.Release|x64.Build.0 = Release|x64
+		{719128C8-62FE-417C-A56F-5B1AA4734FD7}.Release|x86.ActiveCfg = Release|Win32
+		{719128C8-62FE-417C-A56F-5B1AA4734FD7}.Release|x86.Build.0 = Release|Win32
+		{9B30DDEE-834A-4EEE-94AD-DAC2D04D6056}.Debug|x64.ActiveCfg = Debug|x64
+		{9B30DDEE-834A-4EEE-94AD-DAC2D04D6056}.Debug|x64.Build.0 = Debug|x64
+		{9B30DDEE-834A-4EEE-94AD-DAC2D04D6056}.Debug|x86.ActiveCfg = Debug|Win32
+		{9B30DDEE-834A-4EEE-94AD-DAC2D04D6056}.Debug|x86.Build.0 = Debug|Win32
+		{9B30DDEE-834A-4EEE-94AD-DAC2D04D6056}.Release|x64.ActiveCfg = Release|x64
+		{9B30DDEE-834A-4EEE-94AD-DAC2D04D6056}.Release|x64.Build.0 = Release|x64
+		{9B30DDEE-834A-4EEE-94AD-DAC2D04D6056}.Release|x86.ActiveCfg = Release|Win32
+		{9B30DDEE-834A-4EEE-94AD-DAC2D04D6056}.Release|x86.Build.0 = Release|Win32
+		{D089001A-3BC8-4AE7-AF1F-0D03444FC59B}.Debug|x64.ActiveCfg = Debug|x64
+		{D089001A-3BC8-4AE7-AF1F-0D03444FC59B}.Debug|x64.Build.0 = Debug|x64
+		{D089001A-3BC8-4AE7-AF1F-0D03444FC59B}.Debug|x86.ActiveCfg = Debug|Win32
+		{D089001A-3BC8-4AE7-AF1F-0D03444FC59B}.Debug|x86.Build.0 = Debug|Win32
+		{D089001A-3BC8-4AE7-AF1F-0D03444FC59B}.Release|x64.ActiveCfg = Release|x64
+		{D089001A-3BC8-4AE7-AF1F-0D03444FC59B}.Release|x64.Build.0 = Release|x64
+		{D089001A-3BC8-4AE7-AF1F-0D03444FC59B}.Release|x86.ActiveCfg = Release|Win32
+		{D089001A-3BC8-4AE7-AF1F-0D03444FC59B}.Release|x86.Build.0 = Release|Win32
+		{C3A73F15-FACC-4B53-BD4F-077E04DA5B82}.Debug|x64.ActiveCfg = Debug|x64
+		{C3A73F15-FACC-4B53-BD4F-077E04DA5B82}.Debug|x64.Build.0 = Debug|x64
+		{C3A73F15-FACC-4B53-BD4F-077E04DA5B82}.Debug|x86.ActiveCfg = Debug|Win32
+		{C3A73F15-FACC-4B53-BD4F-077E04DA5B82}.Debug|x86.Build.0 = Debug|Win32
+		{C3A73F15-FACC-4B53-BD4F-077E04DA5B82}.Release|x64.ActiveCfg = Release|x64
+		{C3A73F15-FACC-4B53-BD4F-077E04DA5B82}.Release|x64.Build.0 = Release|x64
+		{C3A73F15-FACC-4B53-BD4F-077E04DA5B82}.Release|x86.ActiveCfg = Release|Win32
+		{C3A73F15-FACC-4B53-BD4F-077E04DA5B82}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
